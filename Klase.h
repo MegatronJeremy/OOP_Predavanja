@@ -2,10 +2,15 @@
 
 class Complex {
 public:
+    Complex() = default;
+    Complex(double _re, double _im) {
+        real = _re;
+        imag = _im;
+    }
     Complex zbir(Complex); Complex razlika(Complex);  //metode klase
-    float re(); float im();
+    double re(); double im();
 private:
-    float real, imag;      //atributi klase
+    double real = 0, imag = 0;      //atributi klase
 };
 
 class Kompleksni1; // Samo definicija (dovoljno za pokazivac i referencu na klasu) - objekat nije moguc
