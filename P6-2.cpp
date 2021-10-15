@@ -87,6 +87,7 @@ class Spoljna {
 public:
     int x; static int z;
     class Unutrasnja {
+        const static int l = 0;
         int k;
         void f(int i, Spoljna *ps) {
 //            x = i;      // ! GRESKA: nepoznat objekat klase Spoljna
@@ -100,6 +101,7 @@ public:
     };
     void g(int i, Unutrasnja *pu) {
         pu->k = i;  // Dozvoljeno - unutrasnja deklarisala spoljnu prijateljem
+        Unutrasnja::l;
     }
 };
 //Unutrasnja u;       // ! GRESKA: nije u dosegu
@@ -133,6 +135,7 @@ void f() {
         int j() { return s; }   // OK: s je staticka promenljiva
         int k() { return ::x1; }    // OK: x je globalna promenljiva
         int l() { return g(); }     // OK: g() je spoljasnja funkcija
+//        static int m;             // ! GRESKA: m je staticka promenljiva
     };
 }
 //Lokalna *p = 0;     // ! GRESKA: nije u dosegu

@@ -26,7 +26,7 @@ void modifs() {
 // definise pocetno stanje objekta
 // nema tip rezultata (cak ni void)
 // ima proizvoljan broj parametara proizvoljnog tipa
-//      - osim tipa klase ciji je konstruktor, ukoliko je jedini ili prvi, a ostali imaju PVA (podrazumevane vrednosti?)
+//      - osim tipa klase ciji je konstruktor, ukoliko je jedini ili prvi, a ostali imaju PVA (podrazumevane vrednosti)
 //      - dozvoljen je tip pokazivaca i referenci na lvrednost i dvrednost date klase
 
 // Uvek se implicitno poziva prilikom kreiranja objekta
@@ -110,7 +110,7 @@ void g() {
 
 // Pre izvrsavanja tela konstruktora
 //      - incijalizuju se atributi prostih tipova
-//      - pozivaju se konstruktori atributa klasnih tipopva
+//      - pozivaju se konstruktori atributa klasnih tipova
 // Inicijalizatori mogu da se navedu i u zaglavlju definicije (ne deklaracije) konstruktora, iza znaka :
 // Ako atribut ima inicijalizator u telu klase i u definiciji konstruktora, primenjuje se inicijalizator iz definicije
 // konstruktora

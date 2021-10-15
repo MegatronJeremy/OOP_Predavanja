@@ -43,7 +43,7 @@ using namespace std;
 //      - prilikom vracanja vrednosti iz funkcije (stvara se privremeni objekat)
 
 // Prevodilac sme da preskoci poziv KK (radi optimizacije)
-//      - ako se stvarani objekat inicijalizuje privremenim objektom iste klase
+//      - ako se stvarni objekat inicijalizuje privremenim objektom iste klase
 //      - neprijatno, jer izostaju i bocni efekti - program nije prenosiv
 //      - cak i u ovom slucaju mora postojati KK ili premestajuci konstruktor
 

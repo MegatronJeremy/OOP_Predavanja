@@ -78,10 +78,10 @@ void konv() {
 
 // Parametar pokazivac je pokazivac na prostor koji treba osloboditi
 // Parametar velicina odredjuje prostor u bajtima koji treba osloboditi
-// Ako nedostaje odgovarajuci stvarni argument za velicina
+// Ako nedostaje odgovarajuci stvarni argument za velicinu
 //  - funkcija mora sama da odredi velicinu, na osnovu ranije alokacije
 // Funkcija delete ne vraca rezultat
-// Klasa moze imati samo po jednu (za podatak i niz) delete funkciju <-- ugradjeni delete (vrv)
+// Klasa moze imati samo po jednu (za podatak i niz) delete funkciju
 //  - bez obzira sto postoje po dve preklopljene operatorske funkcije delete
 
 // Ako su u klasi T preklopljeni operatori new i delete,
@@ -98,7 +98,7 @@ public:
     void *operator new(size_t sz) { return new char[sz]; } // koristi se ugradjeni new <-- Poziva se kao new(XX) <-> prenosi se kao new(sizeof(XX))
     void operator delete(void *p) { delete []p; } // koristi se ugradjeni delete
     void operator delete(void *p, size_t velicina) {delete []p;}
-    void operator delete(void *p, size_t velicina, int i) {delete []p;}
+    void operator delete(void *p, size_t velicina, int i, int k, int j) {delete []p;}
 };
 // Metodi new i delete ne mogu biti virtuelni, ali se nasledjuju u izvedenim klasama
 
@@ -166,5 +166,9 @@ inline Dani operator++(Dani &d, int) { // postfiksna varijanta
 }
 
 int main() {
+    XX *x;
+    void *p = x;
+    delete p;
+    x->operator delete(p, 2, 3, 4, 5);
     out();
 }

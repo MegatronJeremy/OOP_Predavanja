@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 project(OOP_Predavanja)
 
-set(CMAKE_CXX_STANDARD 14)
-
+set(CMAKE_CXX_STANDARD 17)
 add_executable(IT1 P1-Tartalja.cpp)
 add_executable(IT2-1 P2-1.cpp)
 add_executable(IT2-2 P2-2.cpp)
@@ -18,3 +17,6 @@ add_executable(IT7-1 P7-1.cpp)
 add_executable(IT7-2 P7-2.cpp)
 add_executable(IT8-1 P8-1.cpp)
 add_executable(IT8-2 P8-2.cpp)
+add_executable(IT9-1 P9-1.cpp)
+add_executable(IT9-2 P9-2.cpp)
+add_executable(Primer Primer.cpp)

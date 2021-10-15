@@ -115,7 +115,7 @@ void g() {
 //                                  nije obavezno da se kreiraju pre poziva funkcije main()
 //      Lokalni staticki objekti - pocinju da zive pri prvom nailasku toka programa na njihovu definiciju
 
-// Specijalne (nisu rezervisane) reci (specifikatori): finali i override
+// Specijalne (nisu rezervisane) reci (specifikatori): final i override
 
 // Stroga tipizacija: svaki objekat ima svoj tacno odredjeni tip, objekti razlicitih tipova se ne mogu proizvoljno zamenjivati
 // C++ u manipulisanju primitivnim tipovima labavo tipiziran, a klsanim tipovima strogo tipizirani jezik

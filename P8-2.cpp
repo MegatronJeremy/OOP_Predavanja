@@ -30,7 +30,7 @@ public:         // nasledjen je: int i;
     void g();   // metod izvedene klase
 };              // nasledjen je: void f();
 
-int main() {
+int main2() {
     Osnovna b;
     Izveden d;
     b.f();
@@ -114,7 +114,7 @@ public:
     }
 };
 
-int main2() {
+int main() {
     PI pi;
     pi.j1b = 0; // javni clan klase PI
 //    pi.j2b = 0; // ! GRESKA: zasticen clan klase PI

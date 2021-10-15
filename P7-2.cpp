@@ -125,7 +125,7 @@ void equ() {
 //      t.operator@@(k) ili operator@@(t,k) gde je @@ ili ++ ili --
 //  -> moze biti k!=0
 
-// Operator [] je binarni operator koejm odgovara funkcija operator[]()
+// Operator [] je binarni operator kojem odgovara funkcija operator[]()
 // Operatorska funkcija mora da bude nestaticki metod
 //  - funkcija operator[]() ne moze da bude globalna (prijateljska) funkcija
 // Parametar:
