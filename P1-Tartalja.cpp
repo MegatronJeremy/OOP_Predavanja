@@ -1,3 +1,29 @@
+// Podrska za izvodjenje novih tipova iz postojecih (nasledjuje svosjstva osnovnog tipa i dodaje neka specificna svojstva)
+// Stari programski kod se ne mora menjati i ponovo testirati
+
+// Apstrakcija - prepoznavanje bitnih svojstava skupova slicnih objekata i opisivanje zajednickom klasom
+
+// Kapsulacija implementacije - reprezentacije stanja i realizacije ponasanja
+
+// Objavljivanje interfejsa - kroz "potpise" metoda (ime i lista argumenata)
+
+// Izvodjenje novih tipova (klasa)
+// Dinamicko povezivanje i polimorfizam
+
+// Apstrakcija izraza: FORTRAN - registri masine postali skriveni za programera
+// Apstrakcija kontrole: Algol60 - struktuiran tok kontrole programa
+// Apstrakcija podataka: Pascal - razdvajanje detalja prezentacije podataka od apstraktnih
+//                               operacija koje se definisu nad podacima (npr. tip nabrajanja)
+
+// Klase su apstrakcije zajednickog atributa i zajednickog ponasanja jednog skupa srodnih objekata
+// sadrze podatke clanove (atributi ili polja - definisu stanje) i funkcije clanice (metodi - definisu ponasanje)
+
+// Implementaciju klase cine: privatni podaci clanovi i definicije (zaglavlje sa telom) funkcija
+
+// Interfejs klase cine: javni podaci clanovi i deklaracije javnih funkcija
+
+// Objekat je odredjen stanjem, ponasanjem i identitetom
+
 class Publikacija {
 public:
     Publikacija();                  //Podrazumevani konstruktor (suspenduje se kad napisemo drugi)
@@ -22,6 +48,17 @@ void Publikacija::ispis() {
     cout << "Id: " << id << ", Naslov: "<< naslov << endl;
 }
 
+// Konstruktori - funkcije clanice koje se automatski izvrsavaju pri kreiranju objekata
+// Destruktori - funkcije clanice koje se automatski izvrsavaju pri unistavanju objekata
+
+// Polimorfizam:
+
+// Dinamicko (kasno) vezivanje funkcija za funkciju proglasenu virtualnom (adresa se ne odredjuje u vreme prevodjenja/povezivanja)
+// poziv se vezuje za funkciju u vreme izvrsenja
+
+// Polimorfizam omogucava jedinstvenu obradu objekata osnovne i izvedenih klasa
+// Ponasanje objekta na koji ukazuje pokazivac ne zavisi samo od tipa pokazivaca, vec tipa pokazanog objekta
+
 class Casopis: public Publikacija {
 public:
     Casopis();
@@ -41,11 +78,19 @@ void ispisi_sve(Publikacija *p[], int n) { //neke su knjige, neke su casopisi
     }
 }
 
+// Objekti izvedenih klasa: specijalne vrste objekata osnovne klase, mogu zameniti u izrazima objekat osnovne klase
+// Nasledjeni metodi se mogu redefinisati
+
 #include <cstring>
 Publikacija::Publikacija() {}
 Publikacija::Publikacija(int i, char *n) {
     id = i; strcpy(naslov, n);
 }
+
+// Objektno-bazirani jezici podrzavaju: apstrakciju, kapsulaciju i modulaciju
+// Ada83, Visual Basic V6
+// Objektno-orijentisani jezici dodatno podrzavaju princip nasledjivanja
+// Simula, Smalltalk, Eiffel, Ada95, C++, Java, Visual Basic, .NET, C#
 
 class LosBroj {
     int broj;       //private po defaultu
@@ -65,6 +110,12 @@ void Casopis::unos() {
         broj = 0; god = 0;
     }
 }
+
+// Mehanizam obrade izuzetaka nije svojstven samo OO jezicima (npr. Ada83)
+
+// Preklopljeni operator definise operacije nad korisnickim (klasnim) tipom podataka
+
+// Genericki mehanizam (mehanizam sablona) je u potpunosti staticki - zamena parametara je u vreme prevodjenja
 
 template <class T> class SablonPublikacija {
     T id; //identifikator proizvoljnog tipa (ne samo int - vec neki string)
